@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 선택자(selector) 우선순위 */
+      p {
+        color: red;
+        font-size: 30px;
+      }
+
+      .order {
+        color: green;
+      }
+
+      #unit {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>test1</p>
+    <!-- 스타일 직접 설정이 제일 우선순위가 높다-->
+    <p id="unit" class="order" style="color: purple">test2</p>
+    <p>test3</p>
+    <p class="order">test4</p>
+  </body>
+</html>

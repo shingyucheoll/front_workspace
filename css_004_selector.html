@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_004_selector</title>
+    <style>
+      /* p.unit과 p .unit은 다르다*/
+      /* p라는 자손중 unit을 가지고 있을때 */
+      p .unit {
+        background-color: aqua;
+      }
+
+      /* p의 클래스 이름이 unit일때 */
+      p.unit {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span class="unit"> p요소의 자손요소인 span요소에 설정된 class속성</span>
+    </p>
+
+    <p class="unit">p요소에 설정된 class속성</p>
+  </body>
+</html>

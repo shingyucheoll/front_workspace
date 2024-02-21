@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_006_pseudo.html</title>
+    <style>
+      /* 아무것도 안했을때 기본색 */
+      a:link {
+        color: red;
+      }
+
+      /* 한번이라도 방문했을떄 */
+      a:visited {
+        color: green;
+      }
+      /* 마우스 올려놨을때 */
+      a:hover {
+        color: pink;
+      }
+
+      /* 클릭하고 있을 때 */
+      a:active {
+        color: aqua;
+      }
+
+      /* 
+      psuedo class 순서
+      :link -> :visited -> :hover -> :active
+      */
+    </style>
+  </head>
+  <body>
+    <a href="https://www.w3schools.com/">w3schools</a>
+  </body>
+</html>
