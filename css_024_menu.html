@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_024_menu.html</title>
+    <style>
+      /* 수평 네비게이션 */
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      body {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      /* .은 class명 #은 id명 */
+      .menulist {
+        width: 294px; /* 가로열 길이를 글자보다 작게 줄 때 글자가 깨지게 된다. */
+        height: 34px;
+        /* background-color: yellow; */
+        border-left: 2px solid black;
+      }
+      /* 공백은 해당 공간 의미 */
+      dl.menulist dt {
+        width: 0;
+        height: 0;
+        /* 0 0 으로 설정 할 시 공간을 아에 차지하지 않게 됨 겹쳐짐*/
+        visibility: hidden;
+        /* 요소의 크기를 벗어난 컨텐츠는 안보이게 하기 위해 */
+        text-indent: -2000px;
+      }
+
+      dl.menulist dd {
+        border: 2px solid black;
+        float: left;
+        border-left: 0;
+        /* 
+        width: 90px;
+        height: 30px; 
+        하이퍼링크에 크기를 지정해줘야 해당 블록에 마우스를 올렸을 때 마우스포인트가 반응한다.
+        */
+      }
+
+      dl.menulist dd a {
+        width: 96px;
+        height: 30px;
+        display: block;
+        /* block 설정 하지 않을 시 겹쳐진다? */
+
+        text-align: center;
+        line-height: 30px;
+        /* height 와 같게 지정 시 가운데 정렬됨*/
+        /* 해당 높이에 대한 중간지점으로 하기 때문에 30px의 절반 15 */
+        text-decoration: none;
+        /* 밑줄 삭제 */
+      }
+
+      dl.menulist dd a:hover {
+        /* hover 마우스 포인트 올렸을 때 */
+        text-decoration: underline;
+        font: size 22px;
+        font-weight: bolder;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <dl class="menulist">
+        <dt>메뉴목록</dt>
+        <dd><a href="#">교육센터</a></dd>
+        <dd><a href="#">교육안내</a></dd>
+        <dd><a href="#">교육일정</a></dd>
+      </dl>
+    </nav>
+  </body>
+</html>
